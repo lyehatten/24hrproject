@@ -1,0 +1,2 @@
+const { Component } = require("react");
+
