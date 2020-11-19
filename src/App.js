@@ -10,32 +10,30 @@ function App() {
   const [lat, setLat] = useState('');
   const [long, setLong] = useState('');
 
-
 function getLocation(){
   navigator.geolocation.getCurrentPosition(function(position) {
     setLat(position.coords.latitude);
     setLong(position.coords.longitude);
-  })
+  } )
 }
 
-
 getLocation();
-
+  
   return (
+
     <div className="App">
-      <h1>Location Details</h1>
-
-
-      <p>lat: {lat} long: {long}</p>
+      <h1>Find Info on Your Location!</h1>
       <br/>
-      {/* <NasaImage lat={lat} long={long}/> */}
+      {/* {lat !=="" && long!=="" ? <NasaImage lat={lat} long={long}/> : <p>Location not Available! Please accept request for location access!</p>} */}
       <br/>
-      {/* <Weather lat={lat} long={long}/> */}
+      {/* {lat !=="" && long!=="" ? <Weather lat={lat} long={long}/> : null} */}
       <br/>
-      <Zomato lat={lat} long={long}/>
+      {/* {lat !=="" && long!=="" ? <Zomato lat={lat} long={long}/> : null} */}
     </div>
   );
 
 }
 
 export default App;
+
+

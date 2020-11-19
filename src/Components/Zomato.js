@@ -20,7 +20,6 @@ const Zomato = (props) => {
     return(
     <div>
       <ShowData foodPlaces={foodPlaces}/>
-      <p>hi</p>
     </div>
     );
 };
@@ -34,11 +33,10 @@ const ShowData = (props) => {
       console.log(rest);
       return(
         <div>
-          <h1>nearby restaurants</h1>
-          <h1>{rest.R.name}</h1>
+          <h1>nearby_restaurants</h1>
         </div>
         
-      // 
+      // <h1>{rest.name}</h1>
   //     <tr>
   //     <td>{pie.flavor}</td>
   //     <td>{pie.baseOfPie}</td>
