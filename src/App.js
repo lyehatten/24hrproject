@@ -10,24 +10,27 @@ function App() {
   const [lat, setLat] = useState('');
   const [long, setLong] = useState('');
 
-function componentDidMount(){
+
+function getLocation(){
   navigator.geolocation.getCurrentPosition(function(position) {
     setLat(position.coords.latitude);
     setLong(position.coords.longitude);
-  } )
+  })
 }
 
-componentDidMount();
+
+getLocation();
 
   return (
     <div className="App">
       <h1>Location Details</h1>
 
+
       <p>lat: {lat} long: {long}</p>
       <br/>
-      <NasaImage lat={lat} long={long}/>
+      {/* <NasaImage lat={lat} long={long}/> */}
       <br/>
-      <Weather lat={lat} long={long}/>
+      {/* <Weather lat={lat} long={long}/> */}
       <br/>
       <Zomato lat={lat} long={long}/>
     </div>
@@ -36,5 +39,3 @@ componentDidMount();
 }
 
 export default App;
-
-
