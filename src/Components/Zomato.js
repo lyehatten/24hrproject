@@ -32,7 +32,6 @@ export default Zomato;
 const ShowData = (props) => {
   return (
     props.foodPlaces.map(rest => {
-      console.log(rest.restaurant);
       return(
         <div className="restContainer">
           <h1>{rest.restaurant.name}</h1>
