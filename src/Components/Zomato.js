@@ -19,9 +19,11 @@ const Zomato = (props) => {
 
 
     return(
-    <div>
-      <h4>Nearby Restaurants</h4>
+    <div className="zomatoApp">
+      <h2>Nearby Restaurants</h2>
+      <div className='results'>
       <ShowData foodPlaces={foodPlaces}/>
+      </div>
     </div>
     );
 };
@@ -35,10 +37,10 @@ const ShowData = (props) => {
       return(
         <div className="restContainer">
           <h1>{rest.restaurant.name}</h1>
-          <p>Cuisine Type: <br/> {rest.restaurant.cuisines}</p>
-          <p>Address: <br/> {rest.restaurant.location.address}</p>
-          <p>User Rating: <br/>{rest.restaurant.user_rating.rating_text}</p>
-          <a href={rest.restaurant.url} target='_blank'>more info</a>
+          <p><b>Cuisine Type:</b><br/> {rest.restaurant.cuisines}</p>
+          <p><b>Address:</b><br/> {rest.restaurant.location.address}</p>
+          <p><b>User Rating:</b><br/>{rest.restaurant.user_rating.rating_text}</p>
+          <a href={rest.restaurant.url} target='_blank'>More Info</a>
         </div>
         
 

@@ -6,6 +6,7 @@ import Weather from './Components/Weather';
 import Zomato from './Components/Zomato';
 
 
+
 function App() {
   const [lat, setLat] = useState('');
   const [long, setLong] = useState('');
@@ -24,9 +25,10 @@ getLocation();
     <div className="App">
       <h1>Find Info on Your Location!</h1>
       <br/>
-      {lat !=="" && long!=="" ? <NasaImage lat={lat} long={long}/> : <p>Location not Available! Please accept request for location access!</p>} 
-      <br/>
-      {lat !=="" && long!=="" ? <Weather lat={lat} long={long}/> : null}
+      <div className="topApps">
+      {lat !=="" && long!=="" ? <NasaImage lat={lat} long={long}/> : <p>Location not Available. Please accept request for location access.<br/>You may need to wait while the page loads!</p>} 
+      {lat !=="" && long!=="" ? <Weather lat={lat} long={long} /> : null}
+      </div>
       <br/>
       {lat !=="" && long!=="" ? <Zomato lat={lat} long={long}/> : null}
     </div>
