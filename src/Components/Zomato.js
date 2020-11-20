@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react';
+import './Zomato.css'
 
 const Zomato = (props) => {
     
@@ -19,6 +20,7 @@ const Zomato = (props) => {
 
     return(
     <div>
+      <h4>Nearby Restaurants</h4>
       <ShowData foodPlaces={foodPlaces}/>
     </div>
     );
@@ -30,10 +32,14 @@ export default Zomato;
 const ShowData = (props) => {
   return (
     props.foodPlaces.map(rest => {
-      console.log(rest);
+      console.log(rest.restaurant);
       return(
-        <div>
-          <h1>nearby_restaurants</h1>
+        <div className="restContainer">
+          <h1>{rest.restaurant.name}</h1>
+          <p>Cuisine Type: <br/> {rest.restaurant.cuisines}</p>
+          <p>Address: <br/> {rest.restaurant.location.address}</p>
+          <p>User Rating: <br/>{rest.restaurant.user_rating.rating_text}</p>
+          <a href={rest.restaurant.url} target='_blank'>more info</a>
         </div>
         
       // <h1>{rest.name}</h1>
