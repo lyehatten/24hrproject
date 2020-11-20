@@ -41,15 +41,7 @@ const ShowData = (props) => {
           <a href={rest.restaurant.url} target='_blank'>more info</a>
         </div>
         
-      // <h1>{rest.name}</h1>
-  //     <tr>
-  //     <td>{pie.flavor}</td>
-  //     <td>{pie.baseOfPie}</td>
-  //     <td>{pie.size}</td>
-  //     <td>{pie.vegan.toString()}</td>
-  //     <td>{pie.hotPie.toString()}</td>
-  //     <td>{pie.crust}</td>
-  //   </tr>
+
   )
 })
   )
