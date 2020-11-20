@@ -1,5 +1,5 @@
 import  {useState, useEffect} from 'react';
-
+import { Button } from 'reactstrap';
 
 
 
@@ -51,16 +51,15 @@ const [tempUnit, setTempUnit] = useState([])
             setTempUnit(false)
         }
     
-console.log(info.weather.description)
 
     return(
-    <div>
-      {/* <ShowData weather={weather}/> */}
-      <button onClick={toggleCelsius}>Celsius</button>
-      <button onClick={toggleFahrenheit}>Fahrenheit</button>
-  {tempUnit !== true ? <p>Celsius: {temp.temp}</p> : <p>Fahrenheit: {currentWeather.temp}</p>}
-      <p>{info.name}</p>
-
+    <div className="weatherApp">
+        <h2>{info.name} Weather</h2>
+        {tempUnit === true ? <p><b>Current Temperature:</b> <br/>{temp.temp}˚C</p> : <p><b>Current Temperature: </b><br/> {currentWeather.temp}˚F</p>}
+        <button className="btn" onClick={toggleCelsius}>Celsius</button>
+        <button className="btn" onClick={toggleFahrenheit}>Fahrenheit</button>
+        {/* {info.weather[0].description !== undefined ? <p>{info.weather[0].description}</p> : null} */}
+        <p><strong>Humidity:</strong> <br/> {temp.humidity}%</p>
      
     
     </div>
