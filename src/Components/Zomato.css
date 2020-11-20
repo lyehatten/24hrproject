@@ -1,0 +1,8 @@
+.restContainer{
+    border: 2px solid black;
+    width: 40%;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 5px;
+    background-color: rgb(107,140,175);
+}

@@ -6,30 +6,31 @@ import Weather from './Components/Weather';
 import Zomato from './Components/Zomato';
 
 
+
 function App() {
   const [lat, setLat] = useState('');
   const [long, setLong] = useState('');
 
-function componentDidMount(){
+function getLocation(){
   navigator.geolocation.getCurrentPosition(function(position) {
     setLat(position.coords.latitude);
     setLong(position.coords.longitude);
   } )
 }
 
-componentDidMount();
-
+getLocation();
+  
   return (
-    <div className="App">
-      <h1>Location Details</h1>
 
-      <p>lat: {lat} long: {long}</p>
+    <div className="App">
+      <h1>Find Info on Your Location!</h1>
       <br/>
-      <NasaImage lat={lat} long={long}/>
+      <div className="topApps">
+      {lat !=="" && long!=="" ? <NasaImage lat={lat} long={long}/> : <p>Location not Available. Please accept request for location access.<br/>You may need to wait while the page loads!</p>} 
+      {lat !=="" && long!=="" ? <Weather lat={lat} long={long} /> : null}
+      </div>
       <br/>
-      <Weather lat={lat} long={long}/>
-      <br/>
-      <Zomato lat={lat} long={long}/>
+      {lat !=="" && long!=="" ? <Zomato lat={lat} long={long}/> : null}
     </div>
   );
 

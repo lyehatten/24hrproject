@@ -1,38 +1,62 @@
+html{
+  background: url("./assets/possback.jpeg") fixed bottom;
+  background-color: rgb(0,34,61);
+}
+
 .App {
   text-align: center;
+  width: 70%;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.topApps{
+  margin: justify;
+  border: 2px black solid;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.521);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.satImg{
+  width: 45%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.btn{
+  margin: 3px;
+  background-color: rgba(44, 44, 44, 0.733);
+  color: rgb(233, 232, 232);
+  border: 1px black solid;
+  border-radius: 3px;
+  padding: 7px;
+}
+
+.btn:hover {
+  background-color: rgba(104, 100, 100, 0.562);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.zomatoApp{
+  margin: justify;
+  border: 2px black solid;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.521);
+  padding: 10px;
+  margin-bottom: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.results{
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+}
+
+a {
+  color: black;
+}
+
+a:hover{
+  color: rgb(63, 63, 63);
+}
+
+a:visited{
+  color: rgb(68, 68, 68);
 }
