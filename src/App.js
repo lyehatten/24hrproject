@@ -28,7 +28,7 @@ getLocation();
       <br/>
       {/* {lat !=="" && long!=="" ? <Weather lat={lat} long={long}/> : null} */}
       <br/>
-      {/* {lat !=="" && long!=="" ? <Zomato lat={lat} long={long}/> : null} */}
+      {lat !=="" && long!=="" ? <Zomato lat={lat} long={long}/> : null}
     </div>
   );
 
