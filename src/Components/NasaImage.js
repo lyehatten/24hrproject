@@ -18,8 +18,8 @@ const NasaImage = (props) => {
      
     return (  
         <div className="NASAImg">
-          <h3>NASA Image</h3>
-          <img src={finalURL} width="70%"/>    
+         <h3>NASA Image</h3>
+         <img src={finalURL} className="satImg"/>    
         </div>
     )  
 }
